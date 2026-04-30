@@ -6,20 +6,46 @@
 # Cole abaixo a saída de cada comando e anote o que observou.
 
 echo $$
-  PID do shell: 
+  PID do shell: 47 
 
 cat /proc/[PID]/status   (substitua [PID] pelo número real)
-  PID:
-  PPID (processo pai):
-  State:
+  PID:47
+  PPID (processo pai):1
+  State:S(sleeping)
 
 cat /proc/[PID]/stat (campos relevantes)
-  Campo 2 — nome do executável:
-  Campo 3 — estado:
-  Campos 14 e 15 — utime / stime:
+  Campo 2 — nome do executável:sh
+  Campo 3 — estado:S(sleeping)
+  Campos 14 e 15 — utime / stime:47
 
 ps aux (primeiras linhas)
-  [cole aqui]
+  [Name:   sh
+Umask:  0022
+State:  S (sleeping)
+Tgid:   47
+Ngid:   0
+Pid:    47
+PPid:   1
+TracerPid:      0
+Uid:    0       0       0       0
+Gid:    0       0       0       0
+FDSize: 256
+Groups:
+NStgid: 47
+NSpid:  47
+NSpgid: 47
+NSsid:  47
+VmPeak:     6204 kB
+VmSize:     6204 kB
+VmLck:         0 kB
+VmPin:         0 kB
+VmHWM:      2940 kB
+VmRSS:      2940 kB
+RssAnon:             560 kB
+RssFile:            2380 kB
+RssShmem:              0 kB
+VmData:      560 kB
+]
 
 
 # PARTE B — Processo filho
